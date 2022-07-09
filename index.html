@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PaintJS</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <canvas id="jsCanvas" class="canvas"></canvas>
+      <div id="jsControls" class="controls__colors">
+        <div class="black colors">
+          <div class="color" style="background-color: #f8f9fa"></div>
+          <div class="color" style="background-color: #f1f3f5"></div>
+          <div class="color" style="background-color: #e9ecef"></div>
+          <div class="color" style="background-color: #dee2e6"></div>
+          <div class="color" style="background-color: #ced4da"></div>
+          <div class="color" style="background-color: #adb5bd"></div>
+          <div class="color" style="background-color: #868e96"></div>
+          <div class="color" style="background-color: #495057"></div>
+          <div class="color" style="background-color: #343a40"></div>
+          <div class="color" style="background-color: #212529"></div>
+        </div>
+        <div class="red colors">
+          <div class="color" style="background-color: #fff5f5"></div>
+          <div class="color" style="background-color: #ffe3e3"></div>
+          <div class="color" style="background-color: #ffc9c9"></div>
+          <div class="color" style="background-color: #ffa8a8"></div>
+          <div class="color" style="background-color: #ff8787"></div>
+          <div class="color" style="background-color: #ff6b6b"></div>
+          <div class="color" style="background-color: #fa5252"></div>
+          <div class="color" style="background-color: #f03e3e"></div>
+          <div class="color" style="background-color: #e03131"></div>
+          <div class="color" style="background-color: #c92a2a"></div>
+        </div>
+        <div class="pink colors">
+          <div class="color" style="background-color: #fff0f6"></div>
+          <div class="color" style="background-color: #ffdeeb"></div>
+          <div class="color" style="background-color: #fcc2d7"></div>
+          <div class="color" style="background-color: #faa2c1"></div>
+          <div class="color" style="background-color: #f783ac"></div>
+          <div class="color" style="background-color: #f06595"></div>
+          <div class="color" style="background-color: #e64980"></div>
+          <div class="color" style="background-color: #d6336c"></div>
+          <div class="color" style="background-color: #c2255c"></div>
+          <div class="color" style="background-color: #a61e4d"></div>
+        </div>
+        <div class="grape colors">
+          <div class="color" style="background-color: #f8f0fc"></div>
+          <div class="color" style="background-color: #f3d9fa"></div>
+          <div class="color" style="background-color: #eebefa"></div>
+          <div class="color" style="background-color: #e599f7"></div>
+          <div class="color" style="background-color: #da77f2"></div>
+          <div class="color" style="background-color: #cc5de8"></div>
+          <div class="color" style="background-color: #be4bdb"></div>
+          <div class="color" style="background-color: #ae3ec9"></div>
+          <div class="color" style="background-color: #9c36b5"></div>
+          <div class="color" style="background-color: #862e9c"></div>
+        </div>
+        <div class="violet colors">
+          <div class="color" style="background-color: #f3f0ff"></div>
+          <div class="color" style="background-color: #e5dbff"></div>
+          <div class="color" style="background-color: #d0bfff"></div>
+          <div class="color" style="background-color: #b197fc"></div>
+          <div class="color" style="background-color: #9775fa"></div>
+          <div class="color" style="background-color: #845ef7"></div>
+          <div class="color" style="background-color: #7950f2"></div>
+          <div class="color" style="background-color: #7048e8"></div>
+          <div class="color" style="background-color: #6741d9"></div>
+          <div class="color" style="background-color: #5f3dc4"></div>
+        </div>
+        <div class="indigo colors">
+          <div class="color" style="background-color: #edf2ff"></div>
+          <div class="color" style="background-color: #dbe4ff"></div>
+          <div class="color" style="background-color: #bac8ff"></div>
+          <div class="color" style="background-color: #91a7ff"></div>
+          <div class="color" style="background-color: #748ffc"></div>
+          <div class="color" style="background-color: #5c7cfa"></div>
+          <div class="color" style="background-color: #4c6ef5"></div>
+          <div class="color" style="background-color: #4263eb"></div>
+          <div class="color" style="background-color: #3b5bdb"></div>
+          <div class="color" style="background-color: #364fc7"></div>
+        </div>
+        <div class="blue colors">
+          <div class="color" style="background-color: #e7f5ff"></div>
+          <div class="color" style="background-color: #d0ebff"></div>
+          <div class="color" style="background-color: #a5d8ff"></div>
+          <div class="color" style="background-color: #74c0fc"></div>
+          <div class="color" style="background-color: #4dabf7"></div>
+          <div class="color" style="background-color: #339af0"></div>
+          <div class="color" style="background-color: #228be6"></div>
+          <div class="color" style="background-color: #1c7ed6"></div>
+          <div class="color" style="background-color: #1971c2"></div>
+          <div class="color" style="background-color: #1864ab"></div>
+        </div>
+        <div class="cyan colors">
+          <div class="color" style="background-color: #e3fafc"></div>
+          <div class="color" style="background-color: #c5f6fa"></div>
+          <div class="color" style="background-color: #99e9f2"></div>
+          <div class="color" style="background-color: #66d9e8"></div>
+          <div class="color" style="background-color: #3bc9db"></div>
+          <div class="color" style="background-color: #22b8cf"></div>
+          <div class="color" style="background-color: #15aabf"></div>
+          <div class="color" style="background-color: #1098ad"></div>
+          <div class="color" style="background-color: #0c8599"></div>
+          <div class="color" style="background-color: #0b7285"></div>
+        </div>
+        <div class="teal colors">
+          <div class="color" style="background-color: #e6fcf5"></div>
+          <div class="color" style="background-color: #c3fae8"></div>
+          <div class="color" style="background-color: #96f2d7"></div>
+          <div class="color" style="background-color: #63e6be"></div>
+          <div class="color" style="background-color: #38d9a9"></div>
+          <div class="color" style="background-color: #20c997"></div>
+          <div class="color" style="background-color: #12b886"></div>
+          <div class="color" style="background-color: #0ca678"></div>
+          <div class="color" style="background-color: #099268"></div>
+          <div class="color" style="background-color: #087f5b"></div>
+        </div>
+        <div class="green colors">
+          <div class="color" style="background-color: #ebfbee"></div>
+          <div class="color" style="background-color: #d3f9d8"></div>
+          <div class="color" style="background-color: #b2f2bb"></div>
+          <div class="color" style="background-color: #8ce99a"></div>
+          <div class="color" style="background-color: #69db7c"></div>
+          <div class="color" style="background-color: #51cf66"></div>
+          <div class="color" style="background-color: #40c057"></div>
+          <div class="color" style="background-color: #37b24d"></div>
+          <div class="color" style="background-color: #2f9e44"></div>
+          <div class="color" style="background-color: #2b8a3e"></div>
+        </div>
+        <div class="lime colors">
+          <div class="color" style="background-color: #f4fce3"></div>
+          <div class="color" style="background-color: #e9fac8"></div>
+          <div class="color" style="background-color: #d8f5a2"></div>
+          <div class="color" style="background-color: #c0eb75"></div>
+          <div class="color" style="background-color: #a9e34b"></div>
+          <div class="color" style="background-color: #94d82d"></div>
+          <div class="color" style="background-color: #82c91e"></div>
+          <div class="color" style="background-color: #74b816"></div>
+          <div class="color" style="background-color: #66a80f"></div>
+          <div class="color" style="background-color: #5c940d"></div>
+        </div>
+        <div class="yellow colors">
+          <div class="color" style="background-color: #fff9db"></div>
+          <div class="color" style="background-color: #fff3bf"></div>
+          <div class="color" style="background-color: #ffec99"></div>
+          <div class="color" style="background-color: #ffe066"></div>
+          <div class="color" style="background-color: #ffd43b"></div>
+          <div class="color" style="background-color: #fcc419"></div>
+          <div class="color" style="background-color: #fab005"></div>
+          <div class="color" style="background-color: #f59f00"></div>
+          <div class="color" style="background-color: #f08c00"></div>
+          <div class="color" style="background-color: #e67700"></div>
+        </div>
+        <div class="orange colors">
+          <div class="color" style="background-color: #fff4e6"></div>
+          <div class="color" style="background-color: #ffe8cc"></div>
+          <div class="color" style="background-color: #ffd8a8"></div>
+          <div class="color" style="background-color: #ffc078"></div>
+          <div class="color" style="background-color: #ffa94d"></div>
+          <div class="color" style="background-color: #ff922b"></div>
+          <div class="color" style="background-color: #fd7e14"></div>
+          <div class="color" style="background-color: #f76707"></div>
+          <div class="color" style="background-color: #e8590c"></div>
+          <div class="color" style="background-color: #d9480f"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
