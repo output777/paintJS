@@ -41,3 +41,5 @@ if (canvas) {
     el.addEventListener('click', colorChangeHandler);
   });
 }
+
+// ㄹㄴㅇㄹㅇ널ㄴㄹㄴㅇㄹㅇㄴㄹ
